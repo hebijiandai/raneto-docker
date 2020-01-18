@@ -7,7 +7,7 @@ services:
     environment: 
       - TZ=Asia/Shanghai
     ports:
-      - "80:3000"
+      - "3000:3000"
     volumes:
       - ./content:/data/content
       - ./config/config.default.js:/opt/raneto/example/config.default.js
