@@ -1,0 +1,14 @@
+version: '3'
+services:
+  ranetoweb:
+    container_name: ranetoweb
+    image: appsecco/raneto
+    restart: always
+    environment: 
+      - TZ=Asia/Shanghai
+    ports:
+      - "80:3000"
+    volumes:
+      - ./content:/data/content
+      - ./config/config.default.js:/opt/raneto/example/config.default.js
+      - ./images:/opt/raneto/themes/default/public/images
